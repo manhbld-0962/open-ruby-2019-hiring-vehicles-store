@@ -30,4 +30,21 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  layouts:
+    application:
+      sub: " Hiring vehicles store"
+  static_pages:
+    home:
+      sign_up: "Sign up"
+  users:
+    new:
+      title: "Sign up"
+      btn: "Submit"
+    form:
+      name: "Name"
+      email: Email
+      pass: "Password"
+      pass_con: "Password confirmation"
+    create:
+      wel: "Welcome to the Sample App!"
+      signup_err: "Sign up error"
