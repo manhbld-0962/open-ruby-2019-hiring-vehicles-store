@@ -33,11 +33,22 @@ en:
   layouts:
     application:
       sub: " Hiring vehicles store"
+    header:
+      log_in: "Sign up"
+      home: "Home"
+      product: "Product"
+      contact: "Contact"
+      about: "About us"
   static_pages:
     home:
       sign_up: "Sign up"
-      log_out: "Log out"
-      log_in: "Log in"
+      text1: "Our store have all newest cars that you need"
+      text2: "when an unknown printer took a galley of 
+        type and scrambled"
+      text3: "it to make a type specimen book. 
+        It has survived not only five"
+      text4: "centuries, but also the 
+        leap into electronic typesetting, remaining"
   users:
     new:
       title: "Sign up"

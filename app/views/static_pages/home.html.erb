@@ -1,6 +1,9 @@
-<% if logged_in? %>
-  <%= link_to t(".log_out"), logout_path, method: :delete %>
-<% else %>
-  <%= link_to t(".sign_up"), signup_path %>
-  <li><%= link_to t(".log_in"), login_path %></li>
-<% end %>
+<div class="banner">
+  <div class="app-text">
+    <h1><%= t ".text1" %></h1>
+    <p><%= t ".text2" %><br><%= t ".text3" %><br><%= t ".text4" %></p>
+  </div>
+  <div class="app-picture">
+    <%= image_tag "banner.png" %>
+  </div>
+</div>
