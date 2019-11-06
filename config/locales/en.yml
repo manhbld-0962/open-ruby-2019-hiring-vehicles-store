@@ -36,6 +36,8 @@ en:
   static_pages:
     home:
       sign_up: "Sign up"
+      log_out: "Log out"
+      log_in: "Log in"
   users:
     new:
       title: "Sign up"
@@ -48,3 +50,11 @@ en:
     create:
       wel: "Welcome to the Sample App!"
       signup_err: "Sign up error"
+  sessions:
+    new:
+      title: "Log in"
+      email: "Email"
+      password: "Password"
+      log_in: "Log in"
+      new?: "New acount?"
+      sign_up: "Sign up"

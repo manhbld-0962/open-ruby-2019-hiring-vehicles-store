@@ -7,7 +7,8 @@ class User < ApplicationRecord
     length: {maximum: Settings.user_email_length_max},
     format: {with: Settings.valid_email}, uniqueness: {case_sensitive: false}
   validates :password, presence: true,
-    length: {minimum: Settings.user_pass_length_min, maximum: Settings.maxlength}
+    length: {minimum: Settings.user_pass_length_min, maximum:
+      Settings.password_max_length}
   before_save :downcase_email
   USER_PARAMS = %i(name email password password_confirmation).freeze
   has_secure_password
