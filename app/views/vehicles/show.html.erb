@@ -1,0 +1,28 @@
+<div>
+  <div class="vehicle-show">
+    <%= image_tag "car1.png"%>
+  </div>
+  <center><%= link_to t(".book"),"#", class: "btn btn-primary"%></center>
+  </div>
+  <div class="container">
+  <h2><%= @vehicle.name %></h2>    
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th><%= t ".category" %></th>
+          <th><%= t ".branch" %></th>
+          <th><%= t ".price" %></th>
+          <th><%= t ".description" %></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><%= @vehicle.category.name %></td>
+          <td><%= @vehicle.branch.name %></td>
+          <td><%= @vehicle.price %>$/H</td>
+          <td><%= @vehicle.description %></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

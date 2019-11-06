@@ -69,3 +69,11 @@ en:
       log_in: "Log in"
       new?: "New acount?"
       sign_up: "Sign up"
+  vehicles:
+    show:
+      book: "Book"
+      category: "Category"
+      branch: "Branch"
+      price: "Price"
+      description: "Description"
+      cant_find: "Cannot find"
