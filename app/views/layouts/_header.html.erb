@@ -1,0 +1,13 @@
+<ul>
+  <li class = "logo"><%= image_tag "logo.png" %></li>
+  <li class = "active"><%= t ".home" %></li>
+  <li><%= t ".product" %></li>
+  <li><%= t ".contact" %></li>
+  <li><%= t ".about" %></li>
+  <% if logged_in? %>
+    <li><%= link_to t(".log_out"), logout_path, method: :delete,
+      class: "signup-btn" %></li>
+  <% else %>
+    <li><%= link_to t(".sign_up"), signup_path, class: "signup-btn" %></li>
+  <% end %>
+</ul>
