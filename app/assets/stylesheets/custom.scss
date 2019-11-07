@@ -1,3 +1,5 @@
+@import 'bootstrap-sprockets';
+@import 'bootstrap';
 @import 'colors';
 * {
   margin: 0px;
@@ -10,6 +12,7 @@ body {
   width: 100%;
   background: $gray;
   position: relative;
+  color: $white;
 }
 
 .menu {
@@ -89,6 +92,14 @@ body {
 .app-picture{
   width: 620px;
   float: right;
+  img{
+    width: 100%;
+  }
+}
+
+.vehicle-show{
+  width: 620px;
+  margin-left: 450px;
   img{
     width: 100%;
   }
