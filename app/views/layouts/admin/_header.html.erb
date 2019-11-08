@@ -1,0 +1,17 @@
+<div id="logo">
+  <h1 id="front"><%= t ".logo" %></h1>
+</div>
+<div id="menu1">
+  <ul class="root">
+    <li><%= link_to t(".home"),admin_index_path %></li>
+    <li><%= link_to t(".manage") %>
+      <ul class= "submenu">
+        <li><%= link_to t(".vehicles"), "#" %></li>
+        <li><%= link_to t(".bills"), "#" %></li>
+        <li><%= link_to t(".users"), "#" %></li>
+      </ul>
+    </li>
+    <li><%= link_to t(".banner"), "#" %></li>
+    <li><%= link_to t(".chart"), "#" %></li>
+  </ul>
+</div>
