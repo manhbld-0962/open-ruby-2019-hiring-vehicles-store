@@ -39,6 +39,18 @@ en:
       product: "Product"
       contact: "Contact"
       about: "About us"
+    admin:
+      application:
+        sub: "Admin page"
+      header:
+        home: "Home"
+        logo: "Admin page"
+        manage: "Manage"
+        vehicles: "Vehicles"
+        bills: "Bills"
+        users: "Users"
+        banner: "Banner"
+        chart: "Chart"
   static_pages:
     home:
       sign_up: "Sign up"
@@ -77,3 +89,6 @@ en:
       price: "Price"
       description: "Description"
       cant_find: "Cannot find"
+  admin:
+    index:
+      wel: "Welcome to admin page of Hiring Vehicle Store"
