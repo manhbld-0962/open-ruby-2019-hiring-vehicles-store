@@ -2,7 +2,8 @@
   <div class="vehicle-show">
     <%= image_tag "car1.png"%>
   </div>
-  <center><%= link_to t(".book"),"#", class: "btn btn-primary"%></center>
+  <center><%= link_to t(".book"), new_hiring_path(vehicle_id: @vehicle.id),
+    class: "btn btn-primary"%></center>
   </div>
   <div class="container">
   <h2><%= @vehicle.name %></h2>    

@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
       if user.admin?
         redirect_to admin_index_path
       else
-        redirect_to root_path
+        redirect_back_or root_path
       end
     else
       flash[:danger] = t ".invalid"

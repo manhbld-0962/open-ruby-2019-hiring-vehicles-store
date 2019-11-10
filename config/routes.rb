@@ -9,5 +9,6 @@ Rails.application.routes.draw do
     resources :users, only: :create
     resources :vehicles, only: :show
     resources :admin, only: :index
+    resources :hirings, only: %i(new create index)
   end
 end
