@@ -1,0 +1,16 @@
+<%= link_to t(".new"), new_admin_vehicle_path, class: "btn btn-success"%>
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th><%= t ".category" %></th>
+      <th><%= t ".branch" %></th>
+      <th><%= t ".price" %></th>
+      <th><%= t ".description" %></th>
+      <th><%= t ".edit" %></th>
+      <th><%= t ".delete" %></th>
+    </tr>
+  </thead>
+  <tbody id="table_body">
+    <%= render @vehicles %>
+  </tbody>
+</table>

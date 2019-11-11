@@ -1,0 +1,27 @@
+<%= form_for [:admin, @vehicle] do |f| %>
+  <%= render "shared/error_messages", object: f.object %>
+
+  <%= f.label t(".name") %>
+  <%= f.text_field :name, class: "form-control" %>
+  
+  <%= f.label t(".category") %>
+  <div class = "selection">
+    <%= f.collection_select :category_id, @categories, :id, :name %>
+  </div>
+
+  <%= f.label t(".branch") %>
+  <div class = "selection">
+    <%= f.collection_select :branch_id, @branchs, :id, :name %>
+  </div>
+
+  <%= f.label t(".quantity") %>
+  <%= f.number_field :quantity, class: "form-control" %>
+
+  <%= f.label t(".description") %>
+  <%= f.text_field :description, class: "form-control" %>
+
+  <%= f.label t(".price") %>
+  <%= f.number_field :price, class: "form-control" %>
+
+  <%= f.submit t(".submit"), class: "btn btn-primary btn-lg" %>
+<% end %>
