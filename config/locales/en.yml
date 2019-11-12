@@ -51,6 +51,7 @@ en:
         users: "Users"
         banner: "Banner"
         chart: "Chart"
+        login: "Log in"
   static_pages:
     home:
       sign_up: "Sign up"
@@ -92,3 +93,9 @@ en:
   admin:
     index:
       wel: "Welcome to admin page of Hiring Vehicle Store"
+  hirings:
+    create:
+      success: "Success"
+      fails: "Fails"
+    form:
+      order: "Order"
