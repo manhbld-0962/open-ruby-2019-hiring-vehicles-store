@@ -93,9 +93,46 @@ en:
   admin:
     index:
       wel: "Welcome to admin page of Hiring Vehicle Store"
+    vehicles:
+      form:
+        name: "Name"
+        category: "Category"
+        branch: "Branch"
+        quantity: "Quantity"
+        description: "Description"
+        price: "Price"
+        submit: "Submit"
   hirings:
     create:
       success: "Success"
       fails: "Fails"
     form:
       order: "Order"
+    vehicles:
+      create:
+        success: "Success"
+        fails: "Fails"
+      update:
+        success: "Success"
+        fails: "Fails"
+      index:
+        category: "Category"
+        branch: "Branch"
+        price: "Price"
+        description: "Description"
+        edit: "Edit"
+        delete: "Delete"
+      form:
+        name: "Name"
+        category: "Category"
+        branch: "Branch"
+        quantity: "Quantity"
+        description: "Description"
+        price: "Price"
+        submit: "Submit"
+      vehicle:
+        edit: "Edit"
+        delete: "Delete"
+        sure? : "Sure?"
+      find_user:
+        cant_find: "Can not find"
