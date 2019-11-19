@@ -3,6 +3,10 @@ class HiringsController < ApplicationController
 
   def new
     @hiring = Hiring.new
+    @vehicle = Vehicle.find_by id: params[:vehicle_id]
+    return if @vehicle
+    flash[:danger] = t ".cant_find"
+    redirect_to root_url
   end
 
   def create
