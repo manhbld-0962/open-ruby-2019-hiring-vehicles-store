@@ -127,6 +127,14 @@ en:
       branch:
         edit: "Edit"
         delete: "Delete"
+    hirings:
+      index:
+        id: "id"
+        customer: "Customer"
+        status: "Status"
+        edit: "Edit"
+      hiring:
+        edit: "Edit"
   hirings:
     new:
       cant_find: "Cannot find user"
@@ -142,3 +150,16 @@ en:
     branch_form:
       create: "Create"
       name_here: "Name of branch"
+  billing_mailer:
+    send_mail_billing:
+      thanks: "Thank you for using our service"
+      your_billing: "Here is your bill id: "
+      your_vehicle: "Your Vehicle"
+      time: "Time"
+      total: "Total payment"
+      branch: "Please bring this email to branch"
+      to: "to receive your vehicle"
+      send_bill: "Billing email"
+  shared:
+    search_form:
+      search: "Search"

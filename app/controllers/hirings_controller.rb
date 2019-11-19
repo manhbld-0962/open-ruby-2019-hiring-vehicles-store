@@ -12,9 +12,9 @@ class HiringsController < ApplicationController
   def create
     @hiring = current_user.hirings.build hiring_params
     vehicle = @hiring.vehicle
-
     if @hiring.save
       vehicle.decrement! :quantity
+      BillingMailer.send_mail_billing(@hiring, current_user).deliver_now
       flash[:success] = t ".success"
     else
       flash[:danger] = t ".fails"

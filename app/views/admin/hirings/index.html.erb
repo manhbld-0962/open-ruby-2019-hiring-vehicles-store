@@ -1,0 +1,14 @@
+<%= render "shared/search_form" %>
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th><%= t ".id" %></th>
+      <th><%= t ".customer" %></th>
+      <th><%= t ".status" %></th>
+      <th><%= t ".edit" %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <%= render @hirings %>
+  </tbody>
+</table>
