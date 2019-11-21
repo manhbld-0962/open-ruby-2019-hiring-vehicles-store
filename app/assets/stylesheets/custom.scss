@@ -130,6 +130,26 @@ body {
   }
 }
 
-#search-field{
+#search-field {
   color: black;
+}
+
+.vehicle-card {
+  width: 600px;
+  height: 400px;
+  margin-left: 150px;
+  
+  #vehicle_image {
+    width: 300px;
+    height: 250px;
+  }
+
+  #card_btn {
+    margin-left: 100px;
+  }
+
+  #card_title {
+    margin-left: 400px;
+    margin-bottom: -60px;
+  }
 }

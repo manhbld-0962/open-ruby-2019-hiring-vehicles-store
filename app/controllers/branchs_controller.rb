@@ -1,6 +1,6 @@
 class BranchsController < ApplicationController
   def index
-    @branchs = Branchs.all
+    @branchs = Branch.all
   end
 
   def show

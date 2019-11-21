@@ -6,7 +6,7 @@ class BillingMailer < ApplicationMailer
   end
 
   private
-  
+
   def billing_locals hiring, user
     {
       hiring_time: hiring.time,
