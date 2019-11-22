@@ -4,7 +4,7 @@ class Admin::VehiclesController < ApplicationController
   before_action :load_data, only: %i(new edit)
 
   def index
-    @vehicles = Vehicle.all
+    @vehicles = Vehicle.all.page(params[:page]).per Settings.per_page
   end
 
   def new

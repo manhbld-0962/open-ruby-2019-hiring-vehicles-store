@@ -1,12 +1,12 @@
 <div>
   <div class="vehicle-show">
-    <%= image_tag "car1.png"%>
+    <%= image_tag @vehicle.picture.url if @vehicle.picture? %>
   </div>
   <center><%= link_to t(".book"), new_hiring_path(vehicle_id: @vehicle.id),
     class: "btn btn-primary"%></center>
   </div>
   <div class="container">
-  <h2><%= @vehicle.name %></h2>    
+  <h2><%= @vehicle.name %></h2>
     <table class="table table-bordered">
       <thead>
         <tr>

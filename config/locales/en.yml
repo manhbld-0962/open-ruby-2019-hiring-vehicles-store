@@ -99,6 +99,7 @@ en:
       create:
         success: "Success"
         fails: "Fails"
+        less: "Less than 5Mb"
       update:
         success: "Success"
         fails: "Fails"
@@ -125,7 +126,7 @@ en:
         submit: "Submit"
     branchs:
       branch:
-        edit: "Edit"
+        update: "Edit"
         delete: "Delete"
     hirings:
       index:
@@ -150,6 +151,8 @@ en:
     branch_form:
       create: "Create"
       name_here: "Name of branch"
+    search_form:
+      search: "Search"
   billing_mailer:
     send_mail_billing:
       thanks: "Thank you for using our service"
@@ -160,6 +163,3 @@ en:
       branch: "Please bring this email to branch"
       to: "to receive your vehicle"
       send_bill: "Billing email"
-  shared:
-    search_form:
-      search: "Search"
