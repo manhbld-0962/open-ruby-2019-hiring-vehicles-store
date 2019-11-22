@@ -25,5 +25,17 @@
         </tr>
       </tbody>
     </table>
+    <div id="comments">
+      <% if logged_in? %>
+        <%= form_for [@vehicle, @comment] do |f| %>
+          <%= f.text_area :content, placeholder: t(".add"), id: "text_area" %><br/>
+          <%= f.hidden_field :user_id, value: current_user.id %>
+          <%= f.submit t(".comment") %>
+        <% end %>
+      <% end %>
+      <ul>
+        <%= render partial: "comments/comment", collection: @vehicle.comments %>
+      </ul>
+    </div>
   </div>
 </div>

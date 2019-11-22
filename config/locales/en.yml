@@ -90,6 +90,8 @@ en:
       price: "Price"
       description: "Description"
       cant_find: "Cannot find"
+      add: "Add comment here"
+      comment: "Comment"
     vehicle:
       details: "Details"
   admin:
@@ -128,6 +130,8 @@ en:
       branch:
         update: "Edit"
         delete: "Delete"
+      create:
+        success: "Success"
     hirings:
       index:
         id: "id"
@@ -140,13 +144,14 @@ en:
     new:
       cant_find: "Cannot find user"
     create:
-      success: "Success"
+      success: "Success, please check your email"
       fails: "Fails"
     form:
       order: "Order"
       how_long: How long do you want to hire?
       hours: "hours"
       total: "Total"
+      per_hour: "/H"
   shared:
     branch_form:
       create: "Create"
@@ -163,3 +168,14 @@ en:
       branch: "Please bring this email to branch"
       to: "to receive your vehicle"
       send_bill: "Billing email"
+  comments:
+    comment:
+      comment_by: "Comment by"
+      on: "on"
+      reply: "Reply"
+    new:
+      add: "Add comment here"
+      reply: "Reply"
+    create:
+      success: "Success"
+      fails: "Fails"

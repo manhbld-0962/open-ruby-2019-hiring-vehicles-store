@@ -1,0 +1,5 @@
+<%= form_for [@comment, @reply] do |f| %>
+  <%= f.text_area :content, placeholder: t(".add") %><br/>
+  <%= f.hidden_field :user_id, value: current_user.id %>
+  <%= f.submit t(".reply") %>
+<% end %>

@@ -1,14 +1,16 @@
 <%= form_for @hiring do |f| %>
   <%= render "shared/error_messages", object: f.object %>
-
-  <%= t ".price" %><p id="vehicle-price"><%= @vehicle.price%></p><%= t "per_hour" %>
+  <div id="price">
+    <%= t ".price" %>: <p id="vehicle-price"><%= @vehicle.price %></p><%= t ".per_hour" %>
+  </div>
   <%= f.label t(".how_long") %>
   <div class="hour-field">
     <%= f.number_field :time, class: "form-control", id: "hiring-time" %>
     <%= t ".hour" %>
   </div>
-  <%= f.label t(".total") %>
-  <p id="total"></p><p>VND</p>
+  <div id="subtotal">
+    <strong><%= f.label t(".total") %>: <p id="total"></p><p>VND</p></strong>
+  </div>
   
   <%= f.hidden_field :vehicle_id, value: params[:vehicle_id] %>
   <center><%= f.submit t(".order"), class: "btn btn-primary btn-lg" %></center>
