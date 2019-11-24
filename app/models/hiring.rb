@@ -1,5 +1,6 @@
 class Hiring < ApplicationRecord
   HIRING_PARAMS = %i(vehicle_id time).freeze
+  HIRING_UPDATE_PARAMS = %i(status).freeze
   enum status: %i(ordered taking give_back)
 
   belongs_to :user

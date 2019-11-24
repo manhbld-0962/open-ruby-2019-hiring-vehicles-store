@@ -140,6 +140,18 @@ en:
         edit: "Edit"
       hiring:
         edit: "Edit"
+      edit:
+        check: "Check customer's bill"
+        close: "Close"
+      form:
+        update: "Update"
+        ordered: "Ordered"
+        taking: "Taking"
+        give_back: "Give Back"
+        update_status: "Update Status"
+      update:
+        success: "Success"
+        fails: "Fails"
   hirings:
     new:
       cant_find: "Cannot find user"
