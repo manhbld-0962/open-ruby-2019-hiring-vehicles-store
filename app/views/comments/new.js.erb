@@ -1,0 +1,2 @@
+<% div_id = "#reply-form-#{params[:comment]}"  %>
+$('<%= div_id %>').html("<%= j(render partial: 'comments/new') %>")

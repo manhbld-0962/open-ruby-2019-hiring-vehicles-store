@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_21_222949) do
+ActiveRecord::Schema.define(version: 2019_11_25_085100) do
 
   create_table "branches", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
@@ -25,13 +25,13 @@ ActiveRecord::Schema.define(version: 2019_11_21_222949) do
   end
 
   create_table "comments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.bigint "user_id"
-    t.bigint "vehicle_id"
     t.string "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "commentable_id"
+    t.string "commentable_type"
+    t.bigint "user_id"
     t.index ["user_id"], name: "index_comments_on_user_id"
-    t.index ["vehicle_id"], name: "index_comments_on_vehicle_id"
   end
 
   create_table "hirings", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -69,7 +69,6 @@ ActiveRecord::Schema.define(version: 2019_11_21_222949) do
     t.index ["category_id"], name: "index_vehicles_on_category_id"
   end
 
-  add_foreign_key "comments", "users"
   add_foreign_key "hirings", "users"
   add_foreign_key "hirings", "vehicles"
   add_foreign_key "vehicles", "branches"

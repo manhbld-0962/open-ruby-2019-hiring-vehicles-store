@@ -5,7 +5,7 @@ class Vehicle < ApplicationRecord
   belongs_to :category
   belongs_to :branch
   has_many :hirings, dependent: :destroy
-  has_many :comments
+  has_many :comments, as: :commentable
   delegate :name, to: :category, prefix: :category
   delegate :name, to: :branch, prefix: :branch
 

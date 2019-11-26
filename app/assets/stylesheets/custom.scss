@@ -105,6 +105,7 @@ body {
   margin-left: 450px;
   img {
     width: 100%;
+    margin-left: -170px
   }
 }
 
@@ -151,5 +152,56 @@ body {
   #card_title {
     margin-left: 400px;
     margin-bottom: -60px;
+  }
+}
+#comments {
+  color: black;
+  margin-left: 300px;
+  #text_area{
+    width: 500px;
+  }
+  #comment {
+    h3{
+      color: $green_lite;
+    }
+
+    p{
+      color: $p_color;
+    }
+
+    #reply {
+      margin-left: 50px;
+    }
+
+    #comment-content {
+      border: 1px solid gray;
+      width: 250px;
+      height: 50px;
+    }
+  }
+}
+.hiring-form {
+  font-size: 20px;
+  padding-left: 190px;
+  #price {
+    p {
+      display : inline;
+    }
+  }
+  .btn {
+    margin-left: -278px;
+  }
+}
+#subtotal {
+  width: 200px;
+  height: 50px;
+  margin-left: 297px;
+  border: 1px solid gray;
+  color: greenyellow;
+  padding-top: 13px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  p {
+    display : inline;
   }
 }

@@ -1,0 +1,18 @@
+<div id="comment">
+  <li>
+    <p><%= t ".comment_by" %> <%= comment.user.name %> <%= t ".on" %>
+      <%= comment.created_at.strftime(Settings.date_format) %></p> 
+    <h3><%= comment.content %></h3>
+    <% if comment.commentable_type == Settings.comment_type %>
+      <%= link_to t(".reply"), new_comment_path(comment_id: comment.id), remote: true %>
+    <% end %>
+    <% div_id = "reply-form-#{comment.id}" %>
+    <div id=<%= div_id %>>
+    </div>
+    <div id="reply">
+      <ul>
+        <%= render partial: "comments/comment", collection: comment.comments %>
+      </ul>
+    </div>
+  </li>
+</div>

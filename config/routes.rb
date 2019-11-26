@@ -7,10 +7,17 @@ Rails.application.routes.draw do
     delete "/logout", to: "sessions#destroy"
     get "/signup", to: "users#new"
     resources :users, only: :create
-    resources :vehicles, only: :show
     resources :admin, only: :index
     resources :hirings, only: %i(new create index)
     resources :branchs, only: %i(index show)
+
+    resources :vehicles, only: :show do
+      resources :comments
+    end
+
+    resources :comments do
+      resources :comments
+    end
 
     namespace :admin do
       resources :vehicles, except: :show
