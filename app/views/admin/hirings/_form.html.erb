@@ -1,0 +1,5 @@
+<%= form_for [:admin, @hiring], remote: true do |f| %>
+  <%= f.label t(".update_status") %>
+    <%= f.select :status, status_option(@statuses) %>
+  <%= f.submit t(".update"), class: "btn btn-primary" %>
+<% end %>
