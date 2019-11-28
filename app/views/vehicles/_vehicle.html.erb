@@ -1,5 +1,6 @@
 <div class="vehicle-card">
   <h2 id="card_title"><%= vehicle.name %></h2>
-  <%= image_tag vehicle.picture.url if vehicle.picture? %>
-  <%= link_to t(".detail"), vehicle, class: "btn btn-primary", id: "card_btn" %>
+  <%= link_to vehicle do %>
+    <%= image_tag check_image(vehicle), id: "image-vehicle" %>
+  <% end %>
 </div>

@@ -10,3 +10,4 @@ accept_image: "image/jpeg, image/gif, image/png, image/jpg"
 resize: [400, 400]
 comment_type: "Vehicle"
 date_format: "%F"
+car_image: "car.png"

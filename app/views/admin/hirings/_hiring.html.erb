@@ -2,5 +2,6 @@
   <td><%= hiring.id %></td>
   <td><%= hiring.user_name %></td>
   <td><%= hiring.status %></td>
+  <td><%= hiring.created_at.to_date %></td>
   <td><%= link_to t(".edit"), edit_admin_hiring_path(hiring.id), class: "btn btn-primary", remote: true %></td>
 </tr>

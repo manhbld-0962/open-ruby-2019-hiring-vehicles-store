@@ -102,15 +102,14 @@ body {
 
 .vehicle-show {
   width: 620px;
-  margin-left: 450px;
+  margin-left: 196px;
   img {
     width: 100%;
-    margin-left: -170px
   }
 }
 
 .selection {
-  color: black;
+  color: $black;
 }
 
 .hour-field {
@@ -206,6 +205,20 @@ body {
   }
 }
 
-#myModal{
+#myModal {
+  color: $black;
+}
+
+.search-input {
+  color: $black;
+}
+
+#image-vehicle {
+  width: 500px;
+  height: 400px;
+  margin-left: 128px;
+}
+
+input {
   color: $black;
 }

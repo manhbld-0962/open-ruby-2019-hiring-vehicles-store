@@ -5,6 +5,10 @@ module ApplicationHelper
   end
 
   def status_option statuses
-    statuses.map {|key, value| [key.humanize, key]}
+    statuses.map{|key, value| [key.humanize, key]}
+  end
+
+  def check_image vehicle
+    vehicle.picture? ? vehicle.picture.url : Settings.car_image
   end
 end
