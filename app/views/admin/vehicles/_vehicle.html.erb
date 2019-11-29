@@ -5,7 +5,7 @@
   <td><%= vehicle.price %>$/H</td>
   <td><%= vehicle.description %></td>
   <td><%= link_to t(".edit"), edit_admin_vehicle_path(id: vehicle.id),
-    class: "btn btn-primary" %></td>
+    class: "btn btn-primary", remote: true %></td>
   <td><%= link_to t(".delete"),admin_vehicle_path(vehicle), data: { confirm: t(".sure?")},
     method: :delete, remote: true, class: "btn btn-danger", id: "destroy-vehicle" %></td>
 </tr>

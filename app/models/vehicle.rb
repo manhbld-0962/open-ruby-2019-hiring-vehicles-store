@@ -13,6 +13,9 @@ class Vehicle < ApplicationRecord
   mount_uploader :picture, PictureUploader
 
   validate :picture_size
+  validates :name, presence: true,
+    length: {maximum: Settings.vehicle_name_length_max}
+  validates :quantity, presence: true
 
   private
 
