@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
   include SessionsHelper
 
-  before_action :set_locale
+  before_action :set_locale, :search
 
   def logged_in_user
     return if logged_in?
@@ -11,6 +11,10 @@ class ApplicationController < ActionController::Base
 
   def default_url_options
     {locale: I18n.locale}
+  end
+
+  def search
+    @search = Vehicle.ransack
   end
 
   private

@@ -11,5 +11,7 @@ class Hiring < ApplicationRecord
 
   validates :time, presence: true
 
-  scope :search, ->(id){id ? Hiring.where(id: id) : Hiring.all}
+  ransacker :created_at do
+    Arel.sql("date(created_at)")
+  end
 end

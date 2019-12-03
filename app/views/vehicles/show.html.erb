@@ -1,6 +1,8 @@
 <div>
   <div class="vehicle-show">
-    <%= image_tag @vehicle.picture.url if @vehicle.picture? %>
+    <%= link_to @vehicle do %>
+      <%= image_tag check_image(@vehicle), id: "image-vehicle" %>
+    <% end %>
   </div>
   <center><%= link_to t(".book"), new_hiring_path(vehicle_id: @vehicle.id),
     class: "btn btn-primary"%></center>

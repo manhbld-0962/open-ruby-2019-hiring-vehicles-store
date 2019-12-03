@@ -11,7 +11,7 @@ Rails.application.routes.draw do
     resources :hirings, only: %i(new create index)
     resources :branchs, only: %i(index show)
 
-    resources :vehicles, only: :show do
+    resources :vehicles, only: %i(index show) do
       resources :comments
     end
 

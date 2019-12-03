@@ -39,6 +39,7 @@ en:
       product: "Product"
       branch: "Branchs"
       about: "About us"
+      search: "Search"
     admin:
       application:
         sub: "Admin page"
