@@ -11,3 +11,5 @@ resize: [400, 400]
 comment_type: "Vehicle"
 date_format: "%F"
 car_image: "car.png"
+vehicle_name_length_max: 50
+bs3: "twitter-bootstrap-3"

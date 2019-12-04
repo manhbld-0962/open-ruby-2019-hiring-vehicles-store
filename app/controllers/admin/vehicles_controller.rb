@@ -1,7 +1,7 @@
 class Admin::VehiclesController < ApplicationController
   layout "admin/application"
   before_action :find_vehicle, except: %i(new create index)
-  before_action :load_data, only: %i(new edit)
+  before_action :load_data, except: %i(index destroy)
 
   def index
     @vehicles = Vehicle.all.page(params[:page]).per Settings.per_page
@@ -16,10 +16,10 @@ class Admin::VehiclesController < ApplicationController
 
     if @vehicle.save
       flash[:success] = t ".success"
-      redirect_to new_admin_vehicle_path
+      redirect_to admin_vehicles_path
     else
       flash[:danger] = t ".fails"
-      render :new
+      render "admin/vehicles/form"
     end
   end
 
@@ -31,7 +31,7 @@ class Admin::VehiclesController < ApplicationController
       redirect_to admin_vehicles_path
     else
       flash[:danger] = t ".fails"
-      render :edit
+      render "admin/vehicles/form"
     end
   end
 

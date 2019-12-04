@@ -3,8 +3,8 @@ class Admin::HiringsController < ApplicationController
   before_action :find_hiring, only: %i(edit update)
 
   def index
-    q = Hiring.ransack params[:q]
-    @hirings = q.result.page(params[:page]).per Settings.per_page
+    @q = Hiring.ransack params[:q]
+    @hirings = @q.result.page(params[:page]).per Settings.per_page
   end
 
   def edit
