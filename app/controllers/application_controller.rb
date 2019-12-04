@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
   include SessionsHelper
 
-  before_action :set_locale, :search
+  before_action :set_locale, :search, :load_data
 
   def logged_in_user
     return if logged_in?
@@ -15,6 +15,10 @@ class ApplicationController < ActionController::Base
 
   def search
     @search = Vehicle.ransack
+  end
+
+  def load_data
+    @branchs = Branch.select :id, :name
   end
 
   private

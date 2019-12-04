@@ -10,23 +10,30 @@
 body {
   height: 100%;
   width: 100%;
-  background: $gray;
+  background: $white-blue;
   position: relative;
-  color: $white;
+  color: $black;
 }
 
 .menu {
+  height: 100px;
   ul {
     display: inline-flex;
     margin: 50px;
     li {
       list-style: none;
       margin: 0 15px;
-      color: $gray_lite;
+      color: $black;
       cursor: pointer;
       font-size: 20px;
       a {
-        color: $gray-lite
+        color: $black;
+      }
+      ul {
+        position:absolute;
+        display: none;
+        margin-top: -20px;
+        margin-left: 0px;
       }
     }
   }
@@ -52,7 +59,7 @@ body {
   color: $white;
   border: 2px solid transparent;
   border-radius: 20px;
-  background-image: linear-gradient($gray, $gray), 
+  background-image: linear-gradient($white, $white),
   radial-gradient(circle at top left, $pink, $blue-lite);
   background-origin: border-box;
   background-clip: content-box,border-box;
@@ -82,6 +89,7 @@ body {
   width: 640px;
   position: relative;
   margin-left: 40px;
+  color: $black;
 }
 
 .app-text p {
@@ -89,7 +97,7 @@ body {
   font-size: 15px;
   margin: 30px 0px 30px 40px;
   line-height: 25px;
-  color: $gray-white;
+  color: $black;
 }
 
 .app-picture {
@@ -154,9 +162,9 @@ body {
   }
 }
 #comments {
-  color: black;
+  color: $black;
   margin-left: 300px;
-  #text_area{
+  #text_area {
     width: 500px;
   }
   #comment {
@@ -164,7 +172,7 @@ body {
       color: $green_lite;
     }
 
-    p{
+    p {
       color: $p_color;
     }
 
@@ -211,6 +219,14 @@ body {
 
 .search-input {
   color: $black;
+  border: 1px $black;
+}
+
+#search-button {
+  height: 25px;
+  width: 25px;
+  border: 0px;
+  background-color: $white-blue;
 }
 
 #image-vehicle {
@@ -221,4 +237,8 @@ body {
 
 input {
   color: $black;
+}
+
+.table {
+  background-color: $white;
 }
