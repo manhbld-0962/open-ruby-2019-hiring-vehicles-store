@@ -14,7 +14,8 @@ class HiringsController < ApplicationController
     vehicle = @hiring.vehicle
     if @hiring.save
       vehicle.decrement! :quantity
-      BillingMailer.send_mail_billing(@hiring, current_user).deliver_now
+      @hiring.update_attributes give_back_time: @hiring.created_at + @hiring.time.hours
+      BillingWorker.perform_async(@hiring.id, current_user.id)
       flash[:success] = t ".success"
     else
       flash[:danger] = t ".fails"
