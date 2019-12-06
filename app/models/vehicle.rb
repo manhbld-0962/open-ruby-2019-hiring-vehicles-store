@@ -10,6 +10,7 @@ class Vehicle < ApplicationRecord
   delegate :name, to: :branch, prefix: :branch
 
   scope :active_vehicles, ->{where.not quantity: Settings.sold_out}
+  scope :joins_hirings, ->{joins(:hirings)}
   mount_uploader :picture, PictureUploader
 
   validate :picture_size

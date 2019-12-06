@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  
+  require "sidekiq/web"
+
+  mount Sidekiq::Web => "/sidekiq"
+
   scope "(:locale)", locale: /en|vi/ do
     root "static_pages#home"
 
@@ -10,6 +15,7 @@ Rails.application.routes.draw do
     resources :admin, only: :index
     resources :hirings, only: %i(new create index)
     resources :branchs, only: %i(index show)
+    resources :statistic, only: :index
 
     resources :vehicles, only: %i(index show) do
       resources :comments
