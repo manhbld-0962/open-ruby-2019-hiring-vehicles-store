@@ -2,11 +2,22 @@
   <li class = "logo"><%= image_tag "logo.png" %></li>
   <li class = "active"><%= t ".home" %></li>
   <li><%= t ".product" %></li>
-  <li><%= link_to t(".branch"), branchs_path %></li>
+  <li class="dropdown">
+    <%= link_to "#", "data-toggle": "dropdown" do %>
+      <%= t ".branch" %>
+      <b class="caret"></b>
+    <% end %>
+    <ul class="dropdown-menu">
+      <%= render partial: "branchs/branch", collection: @branchs %>
+      <li class="divider"></li>
+    </ul>
+  </li>
   <li><%= t ".about" %></li>
   <%= search_form_for(@search, url: vehicles_path) do |f| %>
     <%= f.search_field :name_cont, placeholder: t(".search"), class: "search-input", value: "" %>
-    <%= f.submit t(".search"), class: "btn btn-primary" %>
+    <%= f.button :submit, id: "search-button" do %>
+      <span class="glyphicon glyphicon-search"></span>
+    <% end %>
   <% end %>
   <% if logged_in? %>
     <li><%= link_to t(".log_out"), logout_path, method: :delete,
