@@ -11,6 +11,8 @@ class Hiring < ApplicationRecord
 
   validates :time, presence: true
 
+  scope :taking, ->{where("give_back_time < ?", Time.zone.now)}
+
   ransacker :created_at do
     Arel.sql("date(created_at)")
   end
