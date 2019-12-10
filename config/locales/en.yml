@@ -181,6 +181,7 @@ en:
       branch: "Please bring this email to branch"
       to: "to receive your vehicle"
       send_bill: "Billing email"
+      created_at: "Created at"
   alert_mailer:
     send_mail_alert:
       send_alert: "Alert email"
@@ -196,3 +197,8 @@ en:
     create:
       success: "Success"
       fails: "Fails"
+  statistic:
+    index:
+      most_sale: "Most sale vehicles"
+      name: "Name"
+      sale: "Sale quantity"

@@ -15,6 +15,7 @@ Rails.application.routes.draw do
     resources :admin, only: :index
     resources :hirings, only: %i(new create index)
     resources :branchs, only: %i(index show)
+    resources :statistic, only: :index
 
     resources :vehicles, only: %i(index show) do
       resources :comments
