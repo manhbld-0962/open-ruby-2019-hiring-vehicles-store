@@ -10,14 +10,14 @@
   </head>
 
   <body>
-    <div class="menu">
-      <%= render "layouts/header" %>
-    </div>
-    <div class="container">
-      <% flash.each do |message_type, message| %>
-        <div class="alert alert-<%= message_type %>"><%= message %></div>
-      <% end %>
+    <%= render "layouts/header" %>
+    <% flash.each do |message_type, message| %>
+      <div class="alert alert-<%= message_type %>"><%= message %></div>
+    <% end %>
+    <div class = "container">
       <%= yield %>
     </div>
   </body>
 </html>
+<div id="login-modal"></div>
+<div id="signup-modal"></div>

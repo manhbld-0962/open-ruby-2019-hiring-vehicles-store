@@ -63,19 +63,29 @@ en:
         It has survived not only five"
       text4: "centuries, but also the 
         leap into electronic typesetting, remaining"
+      new: "Our newest Vehicles"
   users:
     new:
       title: "Sign up"
       btn: "Submit"
+      check: "Sign Up"
     form:
       name: "Name"
       email: Email
       pass: "Password"
       pass_con: "Password confirmation"
+      btn: "Submit"
     create:
       wel: "Welcome to the Sample App!"
       signup_err: "Sign up error"
   sessions:
+    form:
+      log_in: "Log in"
+      email: "Email"
+      password: "Password"
+      log_in: "Log in"
+      new?: "New acount?"
+      sign_up: "Sign up"
     new:
       title: "Log in"
       email: "Email"
@@ -83,6 +93,7 @@ en:
       log_in: "Log in"
       new?: "New acount?"
       sign_up: "Sign up"
+      check: "Log in"
   vehicles:
     show:
       book: "Book"
@@ -202,3 +213,6 @@ en:
       most_sale: "Most sale vehicles"
       name: "Name"
       sale: "Sale quantity"
+  branchs:
+    show:
+      list: "List vehicle of branch "

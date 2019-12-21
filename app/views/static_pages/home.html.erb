@@ -1,9 +1,30 @@
-<div class="banner">
-  <div class="app-text">
-    <h1><%= t ".text1" %></h1>
+<div class="show-vehicle">
+  <div class="hero-text text-white">
+    <h3><%= t ".text1" %></h3>
     <p><%= t ".text2" %><br><%= t ".text3" %><br><%= t ".text4" %></p>
   </div>
-  <div class="app-picture">
-    <%= image_tag "banner.png" %>
+  <div class="row">
+    <div class="col-lg-10 offset-lg-5">
+      <center><%= link_to t(".sign_up"), signup_path, class: "btn site-btn", remote: true %></center>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="section-title">
+    <h2><%= t ".new" %></h2>
+  </div>
+  <div class="row">
+    <% @vehicles.each do |vehicle| %>
+      <div class="col-lg-4 col-md-6">
+        <div class="categorie-item">
+          <%= image_tag check_image vehicle %>
+          <div class="ci-text">
+            <h5><%= link_to vehicle.name, vehicle %></h5>
+            <p><%= vehicle.description.truncate Settings.short_text %></p>
+            <span><%= vehicle.price %>VND/H</span>
+          </div>
+        </div>
+      </div>
+    <% end %>
   </div>
 </div>

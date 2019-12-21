@@ -13,3 +13,5 @@ date_format: "%F"
 car_image: "car.png"
 vehicle_name_length_max: 50
 bs3: "twitter-bootstrap-3"
+newest_vehicle: 6
+short_text: 35
