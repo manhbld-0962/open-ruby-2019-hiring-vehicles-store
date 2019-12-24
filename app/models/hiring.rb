@@ -5,11 +5,14 @@ class Hiring < ApplicationRecord
 
   belongs_to :user
   belongs_to :vehicle
+
+  validates :time, presence: true
+  validates :time, numericality: {greater_than_or_equal_to: Setting.min_time}
+  validates :time, numericality: {only_integer: true}
+
   delegate :price, :name, to: :vehicle, prefix: :vehicle
   delegate :branch_name, to: :vehicle
   delegate :name, to: :user, prefix: :user
-
-  validates :time, presence: true
 
   scope :taking, ->{where("give_back_time < ?", Time.zone.now)}
 

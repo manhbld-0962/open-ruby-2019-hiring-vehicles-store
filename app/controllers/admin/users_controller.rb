@@ -1,22 +1,6 @@
-class UsersController < ApplicationController
+class Admin::UsersController < ApplicationController
+  layout "admin/application"
   before_action :find_user, only: %i(show edit update)
-
-  def new
-    @user = User.new
-  end
-
-  def create
-    @user = User.new user_params
-
-    if @user.save
-      log_in @user
-      flash[:success] = t ".wel"
-      redirect_to root_url
-    else
-      flash[:danger] = t ".signup_err"
-      render :new
-    end
-  end
 
   def show; end
 
@@ -25,9 +9,10 @@ class UsersController < ApplicationController
   def update
     if @user.update_attributes user_params
       flash[:success] = t ".success"
-      redirect_to @user
+      redirect_to admin_user_path @user.id
     else
-      render "users/form"
+      flash[:danger] = t ".fails"
+      render "admin/users/form"
     end
   end
 

@@ -15,13 +15,13 @@
   </div>
 
   <%= f.label t(".quantity") %>
-  <%= f.number_field :quantity, class: "form-control" %>
+  <%= f.number_field :quantity, class: "form-control", min: Settings.min_time %>
 
   <%= f.label t(".description") %>
   <%= f.text_field :description, class: "form-control" %>
 
   <%= f.label t(".price") %>
-  <%= f.number_field :price, class: "form-control" %>
+  <%= f.number_field :price, class: "form-control", min: Settings.min_time %>
 
   <span class="picture">
     <%= f.file_field :picture, accept: Settings.accept_image %>
