@@ -1,6 +1,10 @@
-<div class="vehicle-card">
-  <h2 id="card_title"><%= vehicle.name %></h2>
-  <%= link_to vehicle do %>
-    <%= image_tag check_image(vehicle), id: "image-vehicle" %>
-  <% end %>
+<div class="col-lg-4 col-md-6">
+  <div class="categorie-item">
+    <%= image_tag check_image(vehicle) %>
+    <div class="ci-text">
+      <h5><%= link_to vehicle.name, vehicle %></h5>
+      <p><%= vehicle.description.truncate Settings.short_text %></p>
+      <span><%= vehicle.price %>VND/H</span>
+    </div>
+  </div>
 </div>

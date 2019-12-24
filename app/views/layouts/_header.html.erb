@@ -1,29 +1,39 @@
-<ul>
-  <li class = "logo"><%= image_tag "logo.png" %></li>
-  <li class = "active"><%= t ".home" %></li>
-  <li><%= t ".product" %></li>
-  <li class="dropdown">
-    <%= link_to "#", "data-toggle": "dropdown" do %>
-      <%= t ".branch" %>
-      <b class="caret"></b>
-    <% end %>
-    <ul class="dropdown-menu">
-      <%= render partial: "branchs/branch", collection: @branchs %>
-      <li class="divider"></li>
-    </ul>
-  </li>
-  <li><%= t ".about" %></li>
-  <%= search_form_for(@search, url: vehicles_path) do |f| %>
-    <%= f.search_field :name_cont, placeholder: t(".search"), class: "search-input", value: "" %>
-    <%= f.button :submit, id: "search-button" do %>
-      <span class="glyphicon glyphicon-search"></span>
-    <% end %>
-  <% end %>
-  <% if logged_in? %>
-    <li><%= link_to t(".log_out"), logout_path, method: :delete,
-      class: "signup-btn" %></li>
-  <% else %>
-    <li><%= link_to t(".login"), login_path %></li>
-    <li><%= link_to t(".sign_up"), signup_path, class: "signup-btn" %></li>
-  <% end %>
-</ul>
+<header class="header-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3 col-md-3">
+        <div class="site-logo">
+          <%= link_to root_path do%>
+            <%= image_tag "logo.png" %>
+          <% end %>
+        </div>
+        <div class="nav-switch">
+          <i class="fa fa-bars"></i>
+        </div>
+      </div>
+      <div class="col-lg-9 col-md-9">
+        <% if logged_in? %>
+          <%= link_to t(".log_out"), logout_path, method: :delete, class: "site-btn header-btn" %>
+        <% else %>
+          <%= link_to t(".login"), login_path, class: "site-btn header-btn", remote: true  %>
+        <% end %>
+        <nav class="main-menu">
+          <ul>
+            <li><%= link_to t(".home"), root_path%></li>
+            <li><%= link_to t(".about"), "#"%></li>
+            <li class="dropdown">
+              <%= link_to "#", "data-toggle": "dropdown" do %>
+                <%= t ".branch" %>
+                <b class="caret"></b>
+              <% end %>
+              <ul class="dropdown-menu">
+                <%= render partial: "branchs/branch", collection: @branchs %>
+                <li class="divider"></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>

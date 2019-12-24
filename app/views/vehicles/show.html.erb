@@ -1,43 +1,36 @@
-<div>
-  <div class="vehicle-show">
-    <%= link_to @vehicle do %>
-      <%= image_tag check_image(@vehicle), id: "image-vehicle" %>
-    <% end %>
-  </div>
-  <center><%= link_to t(".book"), new_hiring_path(vehicle_id: @vehicle.id),
-    class: "btn btn-primary"%></center>
-  </div>
+<section class="single-course spad pb-0">
   <div class="container">
-  <h2><%= @vehicle.name %></h2>
-    <table class="table table-bordered">
-      <thead>
-        <tr>
-          <th><%= t ".category" %></th>
-          <th><%= t ".branch" %></th>
-          <th><%= t ".price" %></th>
-          <th><%= t ".description" %></th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><%= @vehicle.category.name %></td>
-          <td><%= @vehicle.branch.name %></td>
-          <td><%= @vehicle.price %>$/H</td>
-          <td><%= @vehicle.description %></td>
-        </tr>
-      </tbody>
-    </table>
-    <div id="comments">
-      <% if logged_in? %>
-        <%= form_for [@vehicle, @comment] do |f| %>
-          <%= f.text_area :content, placeholder: t(".add"), id: "text_area" %><br/>
-          <%= f.hidden_field :user_id, value: current_user.id %>
-          <%= f.submit t(".comment") %>
-        <% end %>
-      <% end %>
-      <ul>
-        <%= render partial: "comments/comment", collection: @vehicle.comments %>
-      </ul>
+    <div class="course-meta-area">
+      <div class="row">
+        <%= image_tag @vehicle.picture.url, alt: "", id: "show-vehicle-img" %>
+        <div class="col-lg-10 offset-lg-1">
+          <div class="course-note"><%= t "status" %>: <%= t ".active" %></div>
+          <h3><%= @vehicle.name %></h3>
+          <div class="course-metas">
+            <div class="course-meta">
+              <div class="course-author">
+                <div class="ca-pic set-bg" data-setbg="img/authors/2.jpg"></div>
+                <h6><%= t ".branch" %></h6>
+                <p><%= @vehicle.branch.name %></p>
+              </div>
+            </div>
+            <div class="course-meta">
+              <div class="cm-info">
+                <h6><%= t ".category" %></h6>
+                <p><%= @vehicle.category.name %></p>
+              </div>
+            </div>
+            <div class="course-meta">
+              <div class="cm-info">
+                <h6><%= t ".description" %></h6>
+                <p><%= @vehicle.description %></p>
+              </div>
+            </div>
+          </div>
+            <a href="#" class="site-btn price-btn"><%= t ".price" %>: <%= @vehicle.price %></a>
+            <%= link_to t(".book"), new_hiring_path(vehicle_id: @vehicle.id), class: "site-btn buy-btn", remote: true  %>
+        </div>
+      </div>
     </div>
   </div>
-</div>
+</section>
