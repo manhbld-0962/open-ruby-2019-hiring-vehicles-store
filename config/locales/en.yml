@@ -130,6 +130,8 @@ en:
         description: "Description"
         edit: "Edit"
         delete: "Delete"
+        search: "Search"
+        input: "_INPUT_"
       vehicle:
         edit: "Edit"
         delete: "Delete"
@@ -156,6 +158,9 @@ en:
         customer: "Customer"
         status: "Status"
         edit: "Edit"
+        ordered: "Ordered"
+        taking: "Taking"
+        give_back: "Give Back"
       hiring:
         edit: "Edit"
       edit:

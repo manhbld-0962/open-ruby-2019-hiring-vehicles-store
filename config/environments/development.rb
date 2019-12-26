@@ -68,5 +68,6 @@ Rails.application.configure do
     user_name: ENV["USER_NAME"],
     password: ENV["PASSWORD"],
   }
-   config.action_mailer.default_url_options = {host: 'localhost:3000'}
+  config.action_mailer.default_url_options = {host: ENV["host"]}
+  config.middleware.use I18n::JS::Middleware
 end

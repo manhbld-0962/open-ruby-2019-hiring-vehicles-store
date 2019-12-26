@@ -4,7 +4,7 @@ class Admin::VehiclesController < ApplicationController
   before_action :load_data, except: %i(index destroy)
 
   def index
-    @vehicles = Vehicle.all.page(params[:page]).per Settings.per_page
+    @vehicles = Vehicle.select Vehicle::INDEX_PARAMS
   end
 
   def new
