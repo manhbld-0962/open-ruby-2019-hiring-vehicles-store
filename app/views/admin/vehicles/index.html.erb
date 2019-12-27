@@ -1,12 +1,14 @@
+
 <td><%= link_to t(".new"), new_admin_vehicle_path, class: "btn btn-primary", remote: true %></td>
 <td><%= link_to t(".statistic"), statistic_index_path, class: "btn btn-primary", remote: true %></td>
-<table class="table table-bordered">
+<table id="vehicles-table" class="table table-bordered">
   <thead>
     <tr>
       <th><%= t ".category" %></th>
       <th><%= t ".name" %></th>
       <th><%= t ".branch" %></th>
       <th><%= t ".price" %></th>
+      <th><%= t ".quantity" %></th>
       <th><%= t ".description" %></th>
       <th><%= t ".edit" %></th>
       <th><%= t ".delete" %></th>
@@ -16,6 +18,5 @@
     <%= render @vehicles %>
   </tbody>
 </table>
-<center><%= paginate @vehicles, theme: Settings.bs3 %></center>
 <div id="hiring-modal">
 </div>

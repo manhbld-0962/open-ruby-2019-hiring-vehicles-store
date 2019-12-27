@@ -5,6 +5,7 @@ class Admin::HiringsController < ApplicationController
   def index
     @q = Hiring.ransack params[:q]
     @hirings = @q.result.page(params[:page]).per Settings.per_page
+    @selects = Hiring.statuses.keys
   end
 
   def edit

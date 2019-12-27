@@ -1,6 +1,8 @@
 class Vehicle < ApplicationRecord
   VEHICLE_PARAMS =
     %i(name quantity category_id branch_id description price picture).freeze
+  INDEX_PARAMS =
+    %i(id name quantity price description category_id branch_id)
 
   belongs_to :category
   belongs_to :branch

@@ -7,4 +7,11 @@ $(document).on('turbolinks:load', function () {
   $('#btn-submit').on("click", function() {
     $(this).prop('disabled', true);
   });
+  
+  $('#vehicles-table').dataTable( {
+    language: {
+      search: I18n.t("admin.vehicles.index.input"),
+      searchPlaceholder: I18n.t("admin.vehicles.index.search")
+    }
+} );
 })

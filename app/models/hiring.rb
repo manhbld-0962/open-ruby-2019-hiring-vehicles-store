@@ -7,7 +7,7 @@ class Hiring < ApplicationRecord
   belongs_to :vehicle
 
   validates :time, presence: true
-  validates :time, numericality: {greater_than_or_equal_to: Setting.min_time}
+  validates :time, numericality: {greater_than_or_equal_to: Settings.min_time}
   validates :time, numericality: {only_integer: true}
 
   delegate :price, :name, to: :vehicle, prefix: :vehicle

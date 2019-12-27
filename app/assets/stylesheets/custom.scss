@@ -8,6 +8,8 @@ body {
 
 #show-vehicle-img {
   margin-left: 400px;
+  width: 400px;
+  height: 400px;
 }
 
 .course-meta-area {
@@ -144,4 +146,7 @@ body {
 
 .table{
   background-color: $white;
+}
+#vehicles-table{
+  background-color: $white
 }
