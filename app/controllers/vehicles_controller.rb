@@ -1,6 +1,12 @@
 class VehiclesController < ApplicationController
   def index
-    @vehicles = Vehicle.search(params[:q]).result
+    if params[:search]
+      @vehicles = Vehicle.search(name_cont: params[:search]).result
+      @items = @vehicles.page(params[:page]).per Settings.per_page
+      respond_to :js, :html
+    else
+      @vehicles = Vehicle.page(params[:page]).per Settings.per_page
+    end
   end
 
   def show

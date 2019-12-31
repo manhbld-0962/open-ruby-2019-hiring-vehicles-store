@@ -1,5 +1,41 @@
-<div class="container" >
-  <div class = "list-vehicle">
-    <%= render @vehicles %>
+<% if params[:search] %>
+  <% if @items.any? %>
+    <div class="row" id="search-items">
+      <h3><%= t ".search" %>"<%= params[:search] %>"</h3>
+      <% @items.each do |vehicle| %>
+        <div class="col-lg-4 col-md-6">
+          <div class="categorie-item">
+            <%= image_tag check_image vehicle %>
+            <div class="ci-text">
+              <h5><%= link_to vehicle.name, vehicle %></h5>
+              <p><%= vehicle.description.truncate Settings.short_text %></p>
+              <span><%= vehicle.price %>VND/H</span>
+            </div>
+          </div>
+        </div>
+      <% end %>
+      <%= paginate @items, theme: "twitter-bootstrap-3" %>
+    </div>
+  <% else %>
+    <div class="row" id="search-items">
+      <center><h3><%= t ".empty" %>"<%= params[:search] %>"</h3></center>
+    </div>
+  <% end %>
+<% else %>
+  <div class="row" id="search-items">
+    <center><h3><%= t ".list" %></h3></center>
+    <% @vehicles.each do |vehicle| %>
+      <div class="col-lg-4 col-md-6">
+        <div class="categorie-item">
+          <%= image_tag check_image vehicle %>
+          <div class="ci-text">
+            <h5><%= link_to vehicle.name, vehicle %></h5>
+            <p><%= vehicle.description.truncate Settings.short_text %></p>
+            <span><%= vehicle.price %>VND/H</span>
+          </div>
+        </div>
+      </div>
+    <% end %>
+    <%= paginate @vehicles, theme: "twitter-bootstrap-3" %>
   </div>
-</div>
+<% end %>

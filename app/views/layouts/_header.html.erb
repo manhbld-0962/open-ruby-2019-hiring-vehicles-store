@@ -32,6 +32,26 @@
               </ul>
             </li>
           </ul>
+          <ul>
+            <div class="col-md">
+              <%= form_tag vehicle_path, method: :get,
+                class: "navbar-form search-form", id: "livesearch_form" do %>
+                <div class="form-group dropdown">
+                  <%= text_field_tag :search, params[:search],
+                    class: "form-control dropdown-toggle",
+                    placeholder: t(".search"),
+                    "data-toggle": "dropdown", "aria-hidden": :true,
+                    autocomplete: :off, required: true, id: "livesearch_input" %>
+                  <ul class="dropdown-menu">
+                    <div id="livesearch_dom"></div>
+                  </ul>
+                </div>
+                <%= button_tag type: :submit, class: "btn btn-default" do %>
+                  <span class="glyphicon glyphicon-search"></span>
+                <% end %>
+              <% end %>
+            </div>
+          </ul>
         </nav>
       </div>
     </div>
