@@ -40,3 +40,4 @@ config/environments/*.local.yml
 
 /public/uploads
 vendor/bundle
+/coverage

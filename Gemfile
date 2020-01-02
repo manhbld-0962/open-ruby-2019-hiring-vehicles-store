@@ -32,6 +32,12 @@ gem "whenever", :require => false
 
 group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
+  gem "rspec-rails"
+  gem "shoulda-matchers", "~> 3.0", require: false
+  gem "database_cleaner", "~> 1.5"
+  gem "simplecov"
+  gem "ffaker"
+  gem "factory_bot_rails"
 end
 
 group :development do
