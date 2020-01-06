@@ -11,13 +11,14 @@ Rails.application.routes.draw do
     post "/login", to: "sessions#create"
     delete "/logout", to: "sessions#destroy"
     get "/signup", to: "users#new"
+    get "vehicle(/:search)", to: "vehicles#index", as: :vehicle
     resources :users, except: %i(index destroy)
     resources :admin, only: :index
     resources :hirings, only: %i(new create index)
     resources :branchs, only: %i(index show)
     resources :statistic, only: :index
 
-    resources :vehicles, only: %i(index show) do
+    resources :vehicles, only: :show do
       resources :comments
     end
 

@@ -131,6 +131,8 @@ GEM
       railties (>= 4.2.0)
     ffaker (2.13.0)
     ffi (1.11.1)
+    font-awesome-rails (4.7.0.5)
+      railties (>= 3.2, < 6.1)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
     i18n (1.7.0)
@@ -340,6 +342,7 @@ DEPENDENCIES
   dotenv-rails
   factory_bot_rails
   ffaker
+  font-awesome-rails
   i18n-js
   jbuilder (~> 2.5)
   jquery-datatables-rails

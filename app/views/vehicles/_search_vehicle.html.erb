@@ -1,0 +1,22 @@
+<li class="search-item">
+  <%= link_to vehicle, id: "linkto_item" do %>
+    <div class="col-md-3">
+      <%= image_tag check_image(vehicle), class: "img-responsive" %>
+    </div>
+    <div class="col-md-9">
+      <div class="row">
+        <h4><strong><%= vehicle.name %></strong></h4>
+      </div>
+      <div class="row">
+        <div class="col-md-9" id="price_div">
+          <h5><%= t ".price" %>: <%= vehicle.price %> VND</h5>
+        </div>
+      </div>
+      <div class="row">
+        <h5><%= t ".branch" %>: <%= vehicle.branch.name %></h5>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+  <% end %>
+</li>
+<hr>

@@ -112,6 +112,10 @@ en:
       comment: "Comment"
     vehicle:
       details: "Details"
+    index:
+      search: "Result for key word: "
+      empty: "There is no vehicle matches: "
+      list: "List of all Vehicles"
   admin:
     index:
       wel: "Welcome to admin page of Hiring Vehicle Store"
@@ -193,6 +197,8 @@ en:
       name_here: "Name of branch"
     search_form:
       search: "Search"
+    search:
+      no_result: "No result for: "
   billing_mailer:
     send_mail_billing:
       thanks: "Thank you for using our service"
