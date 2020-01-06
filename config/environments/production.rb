@@ -91,4 +91,7 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+  config.stripe.secret_key = ENV["secret_key"]
+  config.stripe.publishable_key = ENV["publishable_key"]
 end

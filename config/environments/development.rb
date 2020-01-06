@@ -70,4 +70,6 @@ Rails.application.configure do
   }
   config.action_mailer.default_url_options = {host: ENV["host"]}
   config.middleware.use I18n::JS::Middleware
+  config.stripe.secret_key = ENV["secret_key"]
+  config.stripe.publishable_key = ENV["publishable_key"]
 end

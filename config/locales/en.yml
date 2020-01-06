@@ -233,3 +233,15 @@ en:
   branchs:
     show:
       list: "List vehicle of branch "
+  billing:
+    new_card:
+      name: "Stripe"
+      des: "Add your credit card information"
+      panel: "Add payment method"
+    index:
+      let_go: "Let go"
+      have_to: "You have to have stripe card to pay"
+      wel: "Welcome"
+    success:
+      suc: "You successfully linked a credit card to your account"
+      pay: "Payment"

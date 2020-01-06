@@ -11,7 +11,12 @@ Rails.application.routes.draw do
     post "/login", to: "sessions#create"
     delete "/logout", to: "sessions#destroy"
     get "/signup", to: "users#new"
-    get "vehicle(/:search)", to: "vehicles#index", as: :vehicle
+    get "vehicle(/:search)", to: "vehicles#index", as: :vehicles
+    get "/card/new", to: "billing#new", as: :add_payment_method
+    post "/card", to: "billing#create", as: :create_payment_method
+    get "/success", to: "billing#success", as: :success
+    get "/sign_up_stripe", to: "billing#index", as: :stripe_sign_up
+    post "payment", to: "billing#payment"
     resources :users, except: %i(index destroy)
     resources :admin, only: :index
     resources :hirings, only: %i(new create index)

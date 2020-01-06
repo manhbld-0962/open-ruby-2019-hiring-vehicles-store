@@ -17,10 +17,11 @@ class HiringsController < ApplicationController
       @hiring.update_attributes give_back_time: @hiring.created_at + @hiring.time.hours
       BillingWorker.perform_async(@hiring.id, current_user.id)
       flash[:success] = t ".success"
+      redirect_to stripe_sign_up_path
     else
       flash[:danger] = t ".fails"
+      redirect_to root_path
     end
-    redirect_to root_path
   end
 
   private

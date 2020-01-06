@@ -34,7 +34,7 @@
           </ul>
           <ul>
             <div class="col-md">
-              <%= form_tag vehicle_path, method: :get,
+              <%= form_tag vehicles_path, method: :get,
                 class: "navbar-form search-form", id: "livesearch_form" do %>
                 <div class="form-group dropdown">
                   <%= text_field_tag :search, params[:search],
