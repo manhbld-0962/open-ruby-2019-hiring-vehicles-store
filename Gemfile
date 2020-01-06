@@ -6,7 +6,7 @@ gem "bcrypt", "3.1.12"
 gem "bootsnap", ">= 1.1.0", require: false
 gem "bootstrap-datepicker-rails"
 gem "bootstrap-kaminari-views"
-gem "bootstrap-sass", "3.3.7"
+gem "bootstrap-sass", "3.4.1"
 gem "carrierwave"
 gem "coffee-rails", "~> 4.2"
 gem "config"
