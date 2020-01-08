@@ -15,7 +15,7 @@ class Hiring < ApplicationRecord
   delegate :name, to: :user, prefix: :user
 
   scope :taking, ->{where("give_back_time < ?", Time.zone.now)}
-
+  scope :monthly_statistic, ->{group_by_month(:created_at).size}
   ransacker :created_at do
     Arel.sql("date(created_at)")
   end

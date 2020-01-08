@@ -118,7 +118,7 @@ en:
       list: "List of all Vehicles"
   admin:
     index:
-      wel: "Welcome to admin page of Hiring Vehicle Store"
+      wel: "Statistic of Store"
     vehicles:
       create:
         success: "Success"
