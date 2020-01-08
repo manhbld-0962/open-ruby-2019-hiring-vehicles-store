@@ -19,6 +19,7 @@
 //= require i18n.js
 //= require i18n/translations
 //= require lib/searchbox.js
+//= require lib/stripe.js
 //= require activestorage
 //= require turbolinks
 //= require_tree .

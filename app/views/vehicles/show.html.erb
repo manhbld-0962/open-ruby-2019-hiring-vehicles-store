@@ -27,8 +27,10 @@
               </div>
             </div>
           </div>
-            <a href="#" class="site-btn price-btn"><%= t ".price" %>: <%= @vehicle.price %></a>
-            <%= link_to t(".book"), new_hiring_path(vehicle_id: @vehicle.id), class: "site-btn buy-btn", remote: true  %>
+            <%= link_to "#", class: "site-btn price-btn" do %>
+              <%= t ".price" %>: <%= @vehicle.price %>
+            <% end %>
+            <%= link_to t(".book"), new_hiring_path(vehicle_id: @vehicle.id), class: "site-btn buy-btn" %>
         </div>
       </div>
     </div>
