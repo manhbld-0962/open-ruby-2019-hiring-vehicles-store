@@ -20,6 +20,8 @@
 //= require i18n/translations
 //= require lib/searchbox.js
 //= require lib/stripe.js
+//= require lib/gchart.js
+//= require chartkick
 //= require activestorage
 //= require turbolinks
 //= require_tree .

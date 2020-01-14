@@ -11,7 +11,7 @@
   </div>
   <li class="divider"></li>
   <li>
-    <%= link_to vehicle_path(params[:search]),
+    <%= link_to vehicles_path(params[:search]),
       class: "btn btn-default btn-block", id: "see-more" do %>
       <%= t ".see_more" %> <%= @vehicles.size %> <%= t ".for" %> <%= params[:search] %>
     <% end %>
